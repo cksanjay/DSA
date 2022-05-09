@@ -14,7 +14,7 @@ Compilation of my DSA journey in one place.<br><br>
 | 5 | Sliding Window    | [Best Time to Buy & Sell stock](#5-best-time-to-buy--sell-stock)|
 | 6 | Stack | [Valid Parentheses](#6-valid-parentheses)|
 | 7 | Stack | [Min stack](#7-min-stack)|
-
+| 8 | Binary Search | [Binary Search](#8-binary-search)|
 <br>
 
 # Solutions : 
@@ -114,6 +114,26 @@ If the length of the array is 0, then its valid parentheses order.  <br>
 
 **Time & Space Complexity:** O(1) & O(n)   <br>
 
-**Code:** [Java]()
+**Code:** [Java](https://github.com/cksanjay/DSA/blob/main/src/Java/stack/MinStack.java)
+
+[Back to top](#questions)
+
+## 8. Binary Search
+**Question:** [Leetcode](https://leetcode.com/problems/binary-search/)
+
+**Brute Force:** We can use simple linear search.   <br>
+**Time & Space Complexity:** O(n) & O(1)   <br>
+**Optimised:**  As the name suggests, we can use a simple binary search. In binary search there are 3 pointers - left, right & mid.
+Initially left=0, right=len-1 and mid=(left+right)/2. <br>
+- If arr[mid]==target, then we can return mid.
+- Else if arr[mid]<target, It means the value is in next half of the selected array. So we change left as mid+1.
+- Else, It means the value can be narrowed down to the first half of the selected array. So we change right as mid-1. 
+
+We continue this process till either the element is found or till left <=right.
+<br>
+  
+**Time & Space Complexity:** O(log(n)) & O(1)   <br>
+
+**Code:** [Java](https://github.com/cksanjay/DSA/blob/main/src/Java/binarysearch/BinarySearch.java)
 
 [Back to top](#questions)
